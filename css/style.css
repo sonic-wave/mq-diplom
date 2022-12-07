@@ -1,4 +1,575 @@
-h1 {
-    color: yellow;
-    background: purple;
-}
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.woff");
+  }
+  
+  @font-face {
+    font-family: "Open Sans-Bold";
+    src: url("../fonts/OpenSans-Bold.woff");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #ffffff;
+    background-image: url("../images/banner-bg.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    padding-top: 29px;
+  }
+  
+  .header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  .navbar {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  
+  .navbar img {
+    width: 182px;
+  }
+  
+  .navbar_unordered_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .navbar_list {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  .navbar_list a {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 32px;
+  }
+  
+  .navbar_list a:hover {
+    text-decoration: underline;
+  }
+
+  .trends {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .title {
+    display: flex;
+    color: #ffffff;
+    font-family: "Open Sans-Bold", sans-serif;
+    font-size: 45px;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 125px 0 144px 0;
+    line-height: 75px;
+  }
+
+  .trends_main_title {
+    font-family: "Open Sans-Bold", sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .trends_main_title::after {
+    content:"";
+    border-bottom: 3px solid #b59f5b;
+    width: 60px;
+    margin: 10px auto 0 auto;
+    display: block;
+    opacity: 0.6;
+  }
+
+  .trends_news {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 348px; 
+  }
+
+  .trends_picture {
+    border: 1px solid green;
+    width: calc(25% - 5px);
+    background-color: black;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .trends_picture:nth-of-type(n+2) {
+    margin-left: 5px;
+  }
+  
+  .trends_picture1 {
+    background-image: url("../images/trend1.jpg");
+  }
+
+  .trends_picture2 {
+    background-image: url("../images/trend2.jpg");
+  }
+
+  .trends_picture3 {
+    background-image: url("../images/trend3.jpg");
+  }
+
+  .trends_picture4 {
+    background-image: url("../images/trend4.jpg");
+  }
+
+  .trends_picture::before {
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  .trends_article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b59f5b;
+    margin: 0 20px 15px;
+    padding: 30px;
+  }
+
+  .trends_category {
+    list-style-type: none;
+    font-family: "Open Sans-Bold", sans-serif;
+    font-size: 14px;
+    color:#b59f5b;
+    text-transform: uppercase;
+    display: flex;
+  }
+
+  .trends_category li {
+    margin-right: 18px;
+  }
+
+  .trends_title {
+    font-family: "Open Sans-Bold", sans-serif;
+    font-size: 20px;
+    color:#ffffff;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .main_section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .news_section {
+    display: flex;
+    background: #ffffff;
+    margin: 60px auto;
+    max-width: 1200px;
+  }
+  
+  .news {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 272px);
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  
+  .news_post {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  
+  .new_post_last {
+    margin-bottom: 0;
+  }
+  
+  .news_image {
+    width: 381px;
+    height: 295px;
+  }
+  
+  .news_image > img {
+    background-color: #eff6f1;
+    min-width: 381px;
+    min-height: 100%;
+  }
+  
+  .news_article {
+    display: flex;
+    flex-direction: column;
+    min-width: 367px;
+    box-sizing: border-box;
+    margin-left: 30px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .news_category {
+    display: flex;
+    list-style-type: none;
+    font-family: "Open sans-bold", sans-serif;
+    font-size: 14px;
+    color: #b59f5b;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+  
+  .news_category li {
+    margin-right: 18px;
+  }
+  
+  .news_category li:hover {
+    text-decoration: underline;
+  }
+  
+  .news_title {
+    font-family: "Open sans-bold", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+  .news_title:hover {
+    color: #b59f5b;
+  }
+  
+  .news_post_info {
+    display: flex;
+    margin-top: 36px;
+    margin-bottom: 52px;
+  }
+  
+  .news_post_date {
+    color: #888888;
+    font-size: 12px;
+    font-family: "Open sans", sans-serif;
+  }
+  
+  .news_author {
+    font-size: 12px;
+    font-family: "Open sans-bold", sans-serif;
+    margin-left: 12px;
+  }
+  
+  .news_paragraph {
+    font-family: "Open sans", sans-serif;
+    font-size: 15px;
+  }
+  
+  .news_aside {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    margin-left: 120px;
+  }
+  
+  .aside_section_title {
+    font-size: 14px;
+    font-family: "Open sans-bold", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  
+  .aside_section_title::after {
+    content: "";
+    width: 66px;
+    border-bottom: 3px solid #b59f5b;
+    margin: 14px auto 0 auto;
+    display: block;
+    opacity: 0.4;
+  }
+  
+  .news_aside_post {
+    display: flex;
+    margin-bottom: 22px;
+  }
+  
+  .news_aside_post_last {
+    margin-bottom: 60px;
+  }
+  
+  .news_aside_image {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .news_aside_image img {
+    background-color: #eff6f1;
+    width: 70px;
+    min-height: 100%;
+  }
+  
+  .news_aside_info {
+    margin-left: 15px;
+    width: 185px;
+  }
+  
+  .news_aside_date {
+    color: #888888;
+    font-size: 12px;
+    font-family: "Open sans", sans-serif;
+  }
+  
+  .news_aside_title {
+    font-size: 14px;
+    font-family: "Open sans-bold", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+  
+  .news_aside_title:hover {
+    color: #b59f5b;
+  }
+  
+  .search_news_section {
+    width: 272px;
+    display: flex;
+    margin-bottom: 56px;
+  }
+  
+  input::placeholder {
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: "Open sans", sans-serif;
+  }
+  
+  .search_field {
+    width: 223px;
+    height: 48px;
+    border-style: none;
+    background-color: #f4f7f6;
+  }
+  
+  .search_field:focus {
+    outline: 1px solid #b59f5b;
+  }
+  
+  .search_button {
+    background-image: url("../svg/search.svg");
+    background-repeat: no-repeat;
+    background-color: #b59f5b;
+    width: 48px;
+    background-position: center center;
+    background-size: 18px;
+    border: none;
+  }
+  
+  .search_button:hover {
+    background-color: #323232;
+    cursor: pointer;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .mailing_list {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+  }
+  
+  .email_input {
+    width: 272px;
+    height: 48px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border-style: none;
+    background-color: #f4f7f6;
+  }
+  
+  .email_input:focus {
+    outline: 1px solid #b59f5b;
+  }
+  
+  .subscribe_button {
+    width: 272px;
+    height: 48px;
+    background-color: #b59f5b;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Open sans-bold", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+    border: none;
+  }
+  
+  .subscribe_button:hover {
+    background-color: #323232;
+    cursor: pointer;
+  }
+  
+  .tags_section {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 272px;
+    margin-bottom: 56px;
+  }
+  
+  .tags_list {
+    font-size: 12px;
+    font-family: "Open sans-bold", sans-serif;
+    text-transform: uppercase;
+    border: 3px solid #eeeeee;
+    margin: 0px 5px 5px 0;
+    padding: 5px 9px 5px 9px;
+  }
+  
+  .tags_list:hover {
+    border: 3px solid #b59f5b;
+  }
+  
+  .themes_unordered_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+  
+  .themes_list {
+    color: black;
+    font-size: 14px;
+    font-family: "Open sans-bold", sans-serif;
+    text-transform: none;
+    margin: 0 0 30px 0;
+  }
+  
+  .themes_list::after {
+    content: "";
+    width: 272px;
+    border-bottom: 1px solid #eeeeee;
+    margin: 19px 0 0 0;
+    display: block;
+  }
+  
+  .themes_list_sup {
+    font-size: 12px;
+    font-family: "Open sans-bold", sans-serif;
+    color: #b59f5b;
+    margin-left: 5px;
+    vertical-align: super;
+  }
+  
+  .themes_list:hover {
+    color: #b59f5b;
+  }
+  
+  .shop_cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+  }
+  
+  .card img {
+    width: 300px;
+  }
+
+  .price_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .prices {
+    flex-direction: column;
+  }
+
+  .card_button {
+    width: 140px;
+    height: 48px;
+    background-color: #b59f5b;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Open sans-bold", sans-serif;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  .social {
+    display: flex;
+    width: 1170px;
+    height: 83px;
+    background-color: #f4f7f6;
+    margin: 0 auto;
+  }
+  
+  .social_unordered_list {
+    display: flex;
+    list-style-type: none;
+    margin: auto auto auto 488px;
+    box-sizing: border-box;
+  }
+  
+  .social_list {
+    margin-right: 25px;
+  }
+  
+  .social_list a {
+    color: black;
+  }
+  
+  .social_list img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+    font-family: "Open sans-bold", sans-serif;
+    color: #999999;
+    text-align: center;
+    width: 1170px;
+    margin: 73px auto 40px auto;
+  }
