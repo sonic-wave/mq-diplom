@@ -11,7 +11,7 @@
 
     <header class="header">
         <nav class="navbar">
-          <a href="#0"><img src="svg/noemi-logo.svg" alt="logo"></a>
+          <a href="#0"><img src="svg/noemi-logo.svg" class="logo" alt="logo"></a>
           <ul class="navbar_unordered_list">
             <li class="navbar_list"><a href="#0">Главная</a></li>
             <li class="navbar_list"><a href="#0">Посты</a></li>
@@ -20,6 +20,11 @@
             <li class="navbar_list"><a href="#0">Темы</a></li>
             <li class="navbar_list"><a href="#0">Контакты</a></li>
           </ul>
+          <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
         <h1 class="title">Блог о творчестве, спорте, <br>
           и образе жизни</h1>
@@ -68,9 +73,8 @@
       </section>
 
       <div class="main_section">
-      <div class="news_section">
-        <main>
-          <section class="news">
+      <section class="news_section">
+        <main class="news">
       
             <article class="news_post">
               <div class="news_image"><img src="images/last-post1.jpg" alt="Travel Health"></div>
@@ -155,11 +159,9 @@
               </article>
             </article>
       
-          </section>
         </main>
       
-        <aside>
-          <section class="news_aside">
+        <aside class="news_aside">
             
             <h3 class="aside_section_title">Новые посты</h3>
             
@@ -203,12 +205,14 @@
               </div>
             </div>
       
-            <div class="search_news_section">
-              <label for="news_search">
-                <input type="search" class="search_field" id="news_search" placeholder="Найти..."><span class="visually-hidden">Search input</span>
+            <section class="search_news_section">
+              <div class="search_structure">
+                <label for="news_search">
+                  <input type="search" class="search_field" id="news_search" placeholder="Найти..."><span class="visually-hidden">Search input</span>
               </label>
-              <button class="search_button"><span class="visually-hidden">Search button</span></button>
             </div>
+              <button class="search_button"><span class="visually-hidden">Search button</span></button>
+            </section>
       
             <section class="mailing_list">
               <h3 class="aside_section_title">Рассылка</h3>
@@ -242,31 +246,38 @@
               </ul>
             </section>
       
-          </section>
         </aside>
 
-      </div>
+      </section>
 
       <section class="shop">
-        <h2 class="trends_main_title">Сейчас в тренде</h2>
+        <h2 class="trends_main_title">Наши изделия</h2>
 
         <section class="shop_cards">
           <div class="card">
-            <img src="/images/shop-item-desk1.jpg" alt="pillow" class="card_image">
+            <picture class="card_image">
+              <source media="(max-width:640px)" srcset="/images/shop-item-mobile1.jpg">
+              <source media="(min-width:641px) and (max-width:1199px)" srcset="/images/shop-item-tablet1.jpg">
+              <img src="/images/shop-item-desk1.jpg" alt="pillow">
+            </picture>
             <article class="shop_article">
               <h3 class="card_title">Подушка на диван</h3>
               <p class="card_paragraph">Набор из двух подушек с модными принтами. Видео о создании <a href="#0">здесь</a>.</p>
               <section class="price_section">
                 <div class="prices">
                   <p class="card_price discount_price">1000 р</p>
-                  <p class="card_price">1000 р</p>
+                  <p class="card_price">800 р</p>
                 </div>
                 <button class="card_button">В магазин</button>
               </section>
             </article>
           </div>
           <div class="card">
-            <img src="/images/shop-item-desk2.jpg" alt="doll" class="card_image">
+            <picture class="card_image">
+              <source media="(max-width:640px)" srcset="/images/shop-item-mobile2.jpg">
+              <source media="(min-width:641px) and (max-width:1199px)" srcset="/images/shop-item-tablet2.jpg">
+              <img src="/images/shop-item-desk2.jpg" alt="doll">
+            </picture>
             <article class="shop_article">
               <h3 class="card_title">Кукла «зайчик»</h3>
               <p class="card_paragraph">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0">весенняя серия постов</a> в блоге и несколько подкастов.</p>
@@ -279,7 +290,11 @@
             </article>
           </div>
           <div class="card">
-            <img src="/images/shop-item-desk3.jpg" alt="frame" class="card_image">
+            <picture class="card_image">
+              <source media="(max-width:640px)" srcset="/images/shop-item-mobile3.jpg">
+              <source media="(min-width:641px) and (max-width:1199px)" srcset="/images/shop-item-tablet3.jpg">
+              <img src="/images/shop-item-desk3.jpg" alt="frame">
+            </picture>
             <article class="shop_article">
               <h3 class="card_title">Шестиугольная рамка</h3>
               <p class="card_paragraph">Необычная рамка для украшения дома из видео <a href="#0">«Как сделать рамку из подручных средств за 30 минут»</a>.</p>
@@ -308,7 +323,37 @@
         </div>
       </footer>
 
-    </div>
 
+  <div class="popup_container">
+    <div class="popup_block">
+      <div class="aside_section_title">
+        Ваш фидбек
+      </div>
+      <form class=popup_form>
+        <label for="popup_select">
+          Как часто вы заходите на сайт?
+        </label>
+        <select id="popup_select" name="select_list">
+          <option value="everyday">Почти каждый день</option>
+        </select>
+        <section class="radio_section">Вы подписаны на e-mail рассылку?
+        <div class="radio_choice">
+          <label class="input_group">
+            <input type="radio" name="subscription" class="input_control" value="yes" checked>
+            <span class="radio_text">Да</span>
+          </label>
+          <label class="input_group">
+            <input type="radio" name="subscription" class="input_control" value="no">
+            <span class="radio_text">Нет</span>
+          </label>
+        </div>
+        </section>
+        <label for=popup_textarea>Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+        <textarea id="popup_textarea" placeholder="Может, больше рецептов?" rows="10"></textarea>
+        <button class="submit_button">Отправить</button>
+      </form>
+      <button class="popup_close" type="button"><span class="visually-hidden">Close button</span></button>
+    </div>
+  </div>
 </body>
 </html>
