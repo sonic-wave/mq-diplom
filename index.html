@@ -75,7 +75,7 @@
   </section>
 
   <div class="main_section">
-    <section class="news_section">
+    <div class="news_section">
       <main class="news">
 
         <article class="news_post">
@@ -148,7 +148,7 @@
           </article>
         </article>
 
-        <article class="news_post">
+        <article class="news_post new_post_last">
           <div class="news_image"><img src="images/last-post5.jpg" alt="Lifestyle Interior Art"></div>
           <article class="news_article">
             <ul class="news_category">
@@ -214,19 +214,23 @@
 
         <section class="search_news_section">
           <div class="search_structure">
-            <label for="news_search">
+            <form>
+              <label for="news_search">
               <input type="search" class="search_field" id="news_search" placeholder="Найти..."><span
                 class="visually-hidden">Search input</span>
-            </label>
+              </label>
+            </form>
           </div>
           <button class="search_button"><span class="visually-hidden">Search button</span></button>
         </section>
 
         <section class="mailing_list">
           <h3 class="aside_section_title">Рассылка</h3>
-          <input type="email" class="email_input" placeholder="Ваш email-адрес"><span class="visually-hidden">Email
+          <form>
+            <input type="email" class="email_input" placeholder="Ваш email-адрес"><span class="visually-hidden">Email
             input</span>
-          <button class="subscribe_button">Подписаться<span class="visually-hidden">Subscribe button</span></button>
+            <button class="subscribe_button">Подписаться<span class="visually-hidden">Subscribe button</span></button>
+          </form>
         </section>
 
         <section class="tags">
@@ -257,7 +261,7 @@
 
       </aside>
 
-    </section>
+    </div>
 
     <section class="shop">
       <h2 class="trends_main_title">Наши изделия</h2>
@@ -344,7 +348,7 @@
         <div class="aside_section_title">
           Ваш фидбек
         </div>
-        <form class=popup_form>
+        <form class="popup_form">
           <label for="popup_select">
             Как часто вы заходите на сайт?
           </label>
