@@ -38,9 +38,12 @@
 }
 
 .navbar {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -171,10 +174,15 @@
   color: #b59f5b;
   text-transform: uppercase;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .trends_category li {
   margin-right: 18px;
+}
+
+.trends_category li:hover {
+  text-decoration: underline;
 }
 
 .trends_title {
@@ -183,10 +191,15 @@
   color: #ffffff;
   text-transform: uppercase;
   text-align: left;
+  word-wrap: break-word;
+}
+
+.trends_title:hover {
+  color:#b59f5b;
 }
 
 .main_section {
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   max-width: 1200px;
