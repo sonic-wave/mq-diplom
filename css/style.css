@@ -199,7 +199,7 @@
 }
 
 .main_section {
-  width: 60%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   max-width: 1200px;
@@ -208,17 +208,17 @@
 }
 
 .news_section {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   background: #ffffff;
   margin-top: 60px;
   margin-bottom: 60px;
-  justify-content: space-between;
-  align-content: space-between;
+  /* align-content: space-between; */
 }
 
 .news {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -312,6 +312,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 272px;
+  margin-left: 120px;
 }
 
 .aside_section_title {
@@ -496,7 +497,7 @@ input::placeholder {
   font-size: 14px;
   font-family: "Open sans-bold", sans-serif;
   text-transform: none;
-  margin: 0 0 30px 0;
+  margin: 0 0 4px 0;
 }
 
 .themes_list::after {
