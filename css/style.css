@@ -199,22 +199,21 @@
 }
 
 .main_section {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .news_section {
-  /* width: 100%; */
   display: flex;
   flex-direction: row;
   background: #ffffff;
   margin-top: 60px;
   margin-bottom: 60px;
-  /* align-content: space-between; */
 }
 
 .news {
@@ -312,7 +311,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 272px;
-  margin-left: 120px;
+  margin-left: 90px;
 }
 
 .aside_section_title {
@@ -687,8 +686,8 @@ input::placeholder {
   }
 
   .main_section {
-    align-items: space-around;
-    width: 95%;
+    /* align-items: space-around;
+    width: 95%; */
     box-sizing: border-box;
   }
 
@@ -824,6 +823,14 @@ input::placeholder {
 
   .news {
     width: 100%;
+  }
+
+  .news_article {
+    min-width: 100%;
+  }
+
+  .news_image > img {
+    min-width: 100%;
   }
 
   .navbar {
@@ -963,7 +970,7 @@ input::placeholder {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("/svg/form-arrows.svg");
+  background-image: url("../svg/form-arrows.svg");
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: right 20px center;
@@ -983,7 +990,7 @@ input::placeholder {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-image: url("/svg/form-empty-circle.svg");
+  background-image: url("../svg/form-empty-circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 10px;
@@ -991,7 +998,7 @@ input::placeholder {
 }
 
 .input_control:checked~.radio_text::before {
-  background-image: url("/svg/form-circle.svg");
+  background-image: url("../svg/form-circle.svg");
 }
 
 textarea {
@@ -1030,7 +1037,7 @@ textarea:focus {
   right: 0;
   background: none;
   border: none;
-  background-image: url("/svg/form-x.svg");
+  background-image: url("../svg/form-x.svg");
   background-size: 15px;
   background-position: center;
   background-repeat: no-repeat;
