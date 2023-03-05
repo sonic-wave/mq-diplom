@@ -927,6 +927,42 @@ input::placeholder {
   .card:nth-of-type(2n) {
     margin-top: 30px;
   }
+
+  @media (orientation: landscape) {
+
+    .trends_news {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .trends_picture {
+      width: calc(50% - 2.5px);
+      background-size: cover;
+      background-position: center center;
+      min-height: 247px;
+      max-height: 247px;
+    }
+
+    .trends_title {
+      font-size: 17px;
+    }
+
+    .trends_picture:nth-of-type(n+2) {
+      margin-left: 0;
+    }
+
+    .trends_picture:nth-of-type(even) {
+      margin-left: 5px;
+    }
+
+    .trends_picture:nth-of-type(n+3) {
+      margin-top: 5px;
+    }
+
+    .trends_picture1 {
+      margin-top: 5px;
+    }
+  }
 }
 
 .popup_container {
